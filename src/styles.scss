@@ -1,1 +1,120 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700&display=swap');
+
+$bg: #2A3136;
+$text-color: #889490;
+$accent-color: #00E4Ac;
+
+body, html{
+  height: 100%;
+}
+
+body {
+  background: $bg;
+  color: $text-color;
+  font-family: 'Raleway';
+}
+
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: $accent-color;
+}
+
+.cta-btn, .cta-btn:visited {
+  color: $accent-color;
+  border: 1px solid $accent-color;
+  padding: 5px 12px;
+  float: right;
+  border-radius: 5px;
+}
+
+.cta-btn:hover{
+  background: $accent-color;
+  color: $bg;
+}
+
+h1 {
+  font-family: 'Raleway';
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4.2em;
+  line-height: 1.2em;
+}
+
+.body-blur {
+  background: $bg url('/assets/images/blurbg.jpg') no-repeat top center !important;
+  background-size: 90% !important;
+  height: 100%;
+}
+
+.circle {
+  fill: $accent-color;
+}
+
+.arrow {
+  fill: $bg;
+}
+
+#group {
+  cursor: pointer;
+}
+
+#group:hover .circle {
+  animation: animateCircle .5s forwards;
+  -webkit-animation: animateCircle .5s forwards;
+}
+
+#group:hover .arrow {
+  fill: $accent-color;
+}
+
+.loader {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+@keyframes animateCircle {
+  0% {
+    fill: $accent-color;
+  }
+  100% {
+    fill: $bg;
+  }
+}
+
+@media screen and (max-width: 39.9375em){
+  h1{
+    font-size: 1.6em;
+  }
+
+  .body-blur {
+    background: $bg !important;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em){
+  h1{
+    font-size: 2.8em;
+    line-height: 1em;
+  }
+
+  .body-blur {
+    background: $bg !important;
+  }
+}
