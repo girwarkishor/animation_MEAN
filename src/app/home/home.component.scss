@@ -1,0 +1,35 @@
+.post-container {
+  background-color:#363E45;
+  padding:23px;
+  margin-bottom:30px;
+  height:100%;
+  min-height: 350px;
+  position:relative;
+}
+
+.post-title {
+  font-size:1.4em;
+  display:block;
+}
+
+.post-container p {
+  margin: 20px 0 25px 0;
+}
+
+.posts {
+  margin-bottom: 30px;
+}
+
+.btn2 {
+  float:none;
+  position:absolute;
+  bottom:23px;
+}
+
+.external svg {
+  position:relative;
+  width:50px;
+  height:50px;
+  max-width:none;
+  left: 24px;
+}
